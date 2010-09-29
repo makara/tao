@@ -130,6 +130,16 @@ function tao_preprocess_block(&$vars) {
   }
 
   $vars['title'] = !empty($vars['block']->subject) ? $vars['block']->subject : '';
+
+  // In D7 the page content may be served as a block. Replace the generic
+  // 'block' class from the page content with a more specific class that can
+  // be used to distinguish this block from others.
+  // Subthemes can easily override this behavior in an implementation of
+  // preprocess_block().
+  if ($vars['block']->module === 'system' && $vars['block']->delta === 'main') {
+    $vars['classes_array'] = array_diff($vars['classes_array'], array('block'));
+    $vars['classes_array'][] = 'block-page-content';
+  }
 }
 
 /**
