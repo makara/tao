@@ -17,10 +17,10 @@
 
 <div id='navigation'><div class='limiter clearfix'>
   <?php if (isset($main_menu)) : ?>
-    <?php print theme('links', $main_menu, array('class' => 'links main-menu')) ?>
+    <?php print theme('links', array('links' => $main_menu, 'attributes' => array('class' => 'links main-menu'))) ?>
   <?php endif; ?>
   <?php if (isset($secondary_menu)) : ?>
-    <?php print theme('links', $secondary_menu, array('class' => 'links secondary-menu')) ?>
+    <?php print theme('links', array('links' => $secondary_menu, 'attributes' => array('class' => 'links secondary-menu'))) ?>
   <?php endif; ?>
 </div></div>
 
@@ -40,7 +40,7 @@
   </div>
 
   <?php if ($page['sidebar_second']): ?>
-    <div id='right' class='clearfix'><?php print $page['sidebar_second'] ?></div>
+    <div id='right' class='clearfix'><?php print render($page['sidebar_second']) ?></div>
   <?php endif; ?>
 
 </div></div>
