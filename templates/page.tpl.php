@@ -24,6 +24,12 @@
   <?php endif; ?>
 </div></div>
 
+<?php if ($page['highlighted']): ?>
+  <div id='highlighted'><div class='limiter clearfix'>
+    <?php print render($page['highlighted']); ?>
+  </div></div>
+<?php endif; ?>
+
 <div id='page'><div class='limiter clearfix'>
 
   <?php if ($page['sidebar_first']): ?>
