@@ -300,7 +300,9 @@ function tao_preprocess_form_element(&$vars) {
     $required = !empty($element['#required']) ? "<span class='form-required' title='{$required_title}'>*</span>" : '';
     $vars['label_title'] = $t('!title: !required', array('!title' => filter_xss_admin($element['#title']), '!required' => $required));
     $vars['label_attr'] = array();
-    $vars['label_attr']['for'] = !empty($element['#id']) ? $element['#id'] : '';
+    if (!empty($element['#id'])) {
+      $vars['label_attr']['for'] = $element['#id'];
+    }
 
     // Indicate that this form item is labeled
     $vars['attr']['class'] .= ' form-item-labeled';
