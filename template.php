@@ -189,7 +189,7 @@ function tao_preprocess_page(&$vars) {
   $vars['attr'] = $attr;
 
   // Skip navigation links (508).
-  $vars['skipnav'] = l(t('Skip navigation'), NULL, array('fragment' => 'content', 'attributes' => array('id' => 'skipnav')));
+  $vars['skipnav'] = "<a id='skipnav' href='#content'>" . t('Skip navigation') ."</a>";
 }
 
 /**
