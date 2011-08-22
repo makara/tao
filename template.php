@@ -201,7 +201,7 @@ function tao_preprocess_comment(&$vars) {
  */
 function tao_preprocess_fieldset(&$vars) {
   $element = $vars['element'];
-  $vars['attributes'] = $element['#attributes'];
+  $vars['attributes'] = isset($element['#attributes']) ? $element['#attributes'] : array();
   $vars['attributes']['class'][] = 'fieldset';
   if (!empty($element['#title'])) {
     $vars['attributes']['class'][] = 'titled';
