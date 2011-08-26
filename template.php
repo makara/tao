@@ -167,10 +167,12 @@ function tao_preprocess_node(&$vars) {
     unset($vars['content']['comments']);
   }
 
-  $vars['submitted'] = t('Submitted by !username on !datetime', array(
-    '!username' => $vars['name'],
-    '!datetime' => $vars['date'],
-  ));
+  if ($vars['display_submitted']) {
+    $vars['submitted'] = t('Submitted by !username on !datetime', array(
+      '!username' => $vars['name'],
+      '!datetime' => $vars['date'],
+    ));
+  }
 }
 
 /**
