@@ -12,7 +12,7 @@
 
   <?php if (!empty($title_suffix)) print render($title_suffix); ?>
 
-  <?php if (!empty($submitted)): ?>
+  <?php if (!empty($submitted) && !empty($display_submitted)): ?>
     <div class='<?php print $hook ?>-submitted clearfix'><?php print $submitted ?></div>
   <?php endif; ?>
 
