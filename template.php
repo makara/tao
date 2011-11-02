@@ -106,7 +106,15 @@ function tao_preprocess_html(&$vars) {
 function tao_preprocess_page(&$vars) {
   // Split primary and secondary local tasks
   $vars['primary_local_tasks'] = menu_primary_local_tasks();
-  $vars['secondary_local_tasks'] = menu_secondary_local_tasks();
+
+  // Try to display a level of tasks as secondary.
+  for ($level = 1; $level <= 3; $level++) {
+    $links = menu_local_tasks($level);
+    if ($links['tabs']['count'] > 1) {
+      $vars['secondary_local_tasks'] = $links['tabs']['output'];
+      break;
+    }
+  }
 
   // Link site name to frontpage
   $vars['site_name'] = l($vars['site_name'], '<front>');
