@@ -399,7 +399,21 @@ ul.links.inline li a {
   display:inline;
   }
 
-
+  /*============================================================================
+   * clear float
+   *============================================================================*/
+ .clearfix:before,
+ .clearfix:after {
+    content:"";
+    display:table;
+ }
+ .clearfix:after {
+   clear:both;
+   overflow:hidden;
+ }
+.clearfix {
+   zoom:1; /* IE < 8 */
+}
 
 
 
