@@ -382,8 +382,11 @@ html.js .js-hide { display:none; }
   float:left;
   width:200px;
   margin-left:-200px;
+  list-style: none outside none;
   }
-
+.vertical-tabs .vertical-tabs-list li {
+  margin-left: 0;
+}
 .vertical-tabs .vertical-tabs-panes .vertical-tabs-pane {
   margin:0px;
   padding:0px;
