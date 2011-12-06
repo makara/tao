@@ -17,7 +17,6 @@ body {
   background-color: #fff;/*Not all browsers set white as the default background color*/
   color: #444;/*#444 looks better than black*/
   font: 0.8125em/1.231 "Helvetica Neue", Arial, Helvetica, sans-serif;/*0.1825em=13px*/
-  height: 100%;
 }
 
 /*============================================================================
