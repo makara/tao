@@ -6,7 +6,6 @@ html{
   -webkit-text-size-adjust: 100%;
   font-size: 100.1%;/*To prevent bugs in IE and Opera */
   height: 100%;/*Percentage of body in IE height need to set this value in html*/
-  overflow-x: hidden;/*Hidden horizontal scroll bar*/
   overflow-y: scroll;/*Ensure that all browsers display the vertical scroll bar*/
 }
 
