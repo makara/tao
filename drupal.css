@@ -105,13 +105,13 @@ div.ok { border:1px solid #00aa00; }
 
 div.error,
 tr.error {
-  background:#fcc;
+  background-color:#fcc;
   color:#200;
   }
 
 div.warning,
 tr.warning {
-  background:#ffd;
+  background-color:#ffd;
   color:#220;
   }
 
