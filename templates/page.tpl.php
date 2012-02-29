@@ -33,7 +33,7 @@
 <div id='page'><div class='limiter clearfix'>
 
   <?php if ($page['sidebar_first']): ?>
-    <div id='left' class='clearfix'><?php print render($page['sidebar_first']) ?></div>
+    <div id='sidebar-first' class='clearfix'><?php print render($page['sidebar_first']) ?></div>
   <?php endif; ?>
 
   <div id='main-content' class='clearfix'>
@@ -48,7 +48,7 @@
   </div>
 
   <?php if ($page['sidebar_second']): ?>
-    <div id='right' class='clearfix'><?php print render($page['sidebar_second']) ?></div>
+    <div id='sidebar-second' class='clearfix'><?php print render($page['sidebar_second']) ?></div>
   <?php endif; ?>
 
 </div></div>
