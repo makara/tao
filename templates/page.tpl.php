@@ -17,10 +17,10 @@
 
 <div id='navigation'><div class='limiter clearfix'>
   <?php if (isset($main_menu)) : ?>
-    <?php print theme('links', array('links' => $main_menu, 'attributes' => array('class' => 'links main-menu'))) ?>
+    <?php print theme('links', array('links' => $main_menu, 'attributes' => array('class' => 'links main-menu'), 'heading' => array('text' => t('Main menu'), 'level' => 'h2', 'class' => array('element-invisible')))) ?>
   <?php endif; ?>
   <?php if (isset($secondary_menu)) : ?>
-    <?php print theme('links', array('links' => $secondary_menu, 'attributes' => array('class' => 'links secondary-menu'))) ?>
+    <?php print theme('links', array('links' => $secondary_menu, 'attributes' => array('class' => 'links secondary-menu'), 'heading' => array('text' => t('Secondary menu'), 'level' => 'h2', 'class' => array('element-invisible')))) ?>
   <?php endif; ?>
 </div></div>
 
