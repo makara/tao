@@ -1,6 +1,5 @@
 core = 7.x
 description = Tao is a base theme that is all about going with the flow. It takes care of key reset and utility tasks so that sub-themes can get on with their job.
-engine = phptemplate
 name = Tao
 
 ; Regions =====================================================================
